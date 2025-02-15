@@ -19,7 +19,7 @@ public class Item {
     @Column(nullable = false)
     private Integer quantity;
 
-    // Getters and Setters
+    // Getters andd Setters
     public Long getId() {
         return id;
     }
