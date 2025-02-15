@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ITEM MANAGER</h1>
+      <div class="content">
+        <!-- Form Section -->
+        <form id="itemForm">
+          <h2>Add / Edit Item</h2>
+          <input type="hidden" id="itemId" />
+          <label for="itemName">Item Name</label>
+          <input
+            type="text"
+            id="itemName"
+            placeholder="Enter item name"
+            required
+          />
+
+          <label for="itemPrice">Price (USD)</label>
+          <input
+            type="number"
+            id="itemPrice"
+            placeholder="Enter price"
+            required
+            step="0.01"
+            min="0"
+          />
+
+          <label for="itemQuantity">Quantity</label>
+          <input
+            type="number"
+            id="itemQuantity"
+            placeholder="Enter quantity"
+            required
+            min="1"
+          />
+
+          <button type="submit">Save Item</button>
+        </form>
+
+        <!-- Table Section -->
+        <div class="table-container">
+          <h2>Item List</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price (USD)</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="itemsTableBody">
+              <!-- Data will be injected here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Pop-up -->
+    <div id="popup" class="popup">
+      <p id="popup-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
