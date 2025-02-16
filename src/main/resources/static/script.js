@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:8080/items"; // Adjust API URL if needed
+const apiUrl = "https://crud-app-springboot-render.onrender.com/items"; // Adjust API URL if needed
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchItems();
